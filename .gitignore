@@ -1,7 +1,42 @@
+# ========================
+# Build output folders
+# ========================
+x64/           # Plugin compiled DLL/EXE/OBJ files
+
+# ========================
+# Visual Studio temporary files
+# ========================
 .vs/
-Debug/
-Release/
-x64/
-*.rhp
+*.VC.db
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.filters
+*.sln.docstates
+
+# ========================
+# Temporary / cache files
+# ========================
+*.obj
+*.o
+*.exe
+*.dll
 *.pdb
+*.idb
+*.ipch
 *.ilk
+*.pch
+*.log
+*.tmp
+*.tlog/
+*.lastbuildstate
+
+# ========================
+# Editor related files
+# ========================
+*~
+*.swp
+*.swo
+*.bak
+*.orig
