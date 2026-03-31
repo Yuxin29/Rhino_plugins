@@ -20,24 +20,10 @@
 class CCommandYuxinPlugin : public CRhinoCommand
 {
 public:
-  // The one and only instance of CCommandYuxinPlugin is created below.
-  // No copy constructor or operator= is required.
-  // Values of member variables persist for the duration of the application.
 
-  // CCommandYuxinPlugin::CCommandYuxinPlugin()
-  // is called exactly once when static theYuxinPluginCommand is created.
   CCommandYuxinPlugin() = default;
-
-  // CCommandYuxinPlugin::~CCommandYuxinPlugin()
-  // is called exactly once when static theYuxinPluginCommand is destroyed.
-  // The destructor should not make any calls to the Rhino SDK. 
-  // If your command has persistent settings, then override 
-  // CRhinoCommand::SaveProfile and CRhinoCommand::LoadProfile.
   ~CCommandYuxinPlugin() = default;
 
-  // Returns a unique UUID for this command.
-  // If you try to use an id that is already being used, then
-  // your command will not work. Use GUIDGEN.EXE to make unique UUID.
   UUID CommandUUID() override
   {
     // {D6304EA5-26E5-4769-B21C-4D1C9608B116}
@@ -49,7 +35,9 @@ public:
   // Returns the English command name.
   // If you want to provide a localized command name, then override 
   // CRhinoCommand::LocalCommandName.
-  const wchar_t* EnglishCommandName() override { return L"YuxinPlugin"; }
+  const wchar_t* EnglishCommandName() override { 
+      return L"YuxinHelloRhino"; 
+  }
 
   // Rhino calls RunCommand to run the command.
   CRhinoCommand::result RunCommand(const CRhinoCommandContext& context) override;
@@ -61,14 +49,6 @@ static class CCommandYuxinPlugin theYuxinPluginCommand;
 
 CRhinoCommand::result CCommandYuxinPlugin::RunCommand(const CRhinoCommandContext& context)
 {
-  // CCommandYuxinPlugin::RunCommand() is called when the user
-  // runs the "YuxinPlugin".
-
-  // TODO: Add command code here.
-
-  // Rhino command that display a dialog box interface should also support
-  // a command-line, or script-able interface.
-
   ON_wString str;
   str.Format(L"The \"%s\" command is under construction.\n", EnglishCommandName());
   const wchar_t* pszStr = static_cast<const wchar_t*>(str);
