@@ -17,7 +17,7 @@
 // TODO
 - ask git repo within LBP (Josh)
 
-- //DONE
+//DONE
 - play a few fundamentals SDK cmds
 
 ## shourtcuts
