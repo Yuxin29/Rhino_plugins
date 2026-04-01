@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cmdYuxinPlugin.cpp" />
+    <ClCompile Include="YuxinCmd001.cpp" />
     <ClCompile Include="YuxinFirstPluginApp.cpp" />
     <ClCompile Include="YuxinFirstPluginPlugIn.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -27,6 +27,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="notes.md" />
     <None Include="YuxinFirstPlugin.def" />
     <None Include="res\YuxinFirstPlugin.rc2" />
   </ItemGroup>

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{bc8cd6ff-c99a-46d6-b514-fc2cb877ec2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="YuxinFirstPluginApp.cpp">
@@ -24,7 +27,7 @@
     <ClCompile Include="YuxinFirstPluginPlugIn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cmdYuxinFirstPlugin.cpp">
+    <ClCompile Include="YuxinCmd001.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,11 +55,9 @@
     <None Include="res\YuxinFirstPlugin.rc2">
       <Filter>Resource Files</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="YuxinFirstPlugin.idl">
-      <Filter>Source Files</Filter>
-    </Midl>
+    <None Include="notes.md">
+      <Filter>Docs</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="YuxinFirstPlugin.rc">

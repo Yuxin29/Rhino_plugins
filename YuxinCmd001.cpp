@@ -1,4 +1,4 @@
-// cmdYuxinPlugin.cpp : command file
+// YuxinCmd001.cpp : command file
 //
 
 #include "stdafx.h"
@@ -36,7 +36,7 @@ public:
   // If you want to provide a localized command name, then override 
   // CRhinoCommand::LocalCommandName.
   const wchar_t* EnglishCommandName() override { 
-      return L"YuxinHelloRhino"; 
+      return L"YuxinCmd001"; 
   }
 
   // Rhino calls RunCommand to run the command.
@@ -50,7 +50,7 @@ static class CCommandYuxinPlugin theYuxinPluginCommand;
 CRhinoCommand::result CCommandYuxinPlugin::RunCommand(const CRhinoCommandContext& context)
 {
   ON_wString str;
-  str.Format(L"The \"%s\" command is under construction.\n", EnglishCommandName());
+  str.Format(L"The \"%s\" 001 in testing.\n", EnglishCommandName());
   const wchar_t* pszStr = static_cast<const wchar_t*>(str);
   if (context.IsInteractive())
     RhinoMessageBox(pszStr, YuxinFirstPluginPlugIn().PlugInName(), MB_OK);
@@ -68,6 +68,62 @@ CRhinoCommand::result CCommandYuxinPlugin::RunCommand(const CRhinoCommandContext
 
   return CRhinoCommand::success;
 }
+
+
+class CCommandYuxinPlugin02 : public CRhinoCommand
+{
+public:
+
+    CCommandYuxinPlugin02() = default;
+    ~CCommandYuxinPlugin02() = default;
+
+    UUID CommandUUID() override
+    {
+        // {D6304EA5-26E5-4769-B21C-4D1C9608B116}
+        static const GUID YuxinPluginCommand_UUID =
+        { 0x3b785819, 0x1d8, 0x4897, { 0x94, 0x7b, 0xba, 0x1f, 0xc1, 0x34, 0xc8, 0xbe } };
+
+        return YuxinPluginCommand_UUID;
+    }
+
+    // Returns the English command name.
+    // If you want to provide a localized command name, then override 
+    // CRhinoCommand::LocalCommandName.
+    const wchar_t* EnglishCommandName() override {
+        return L"YuxinCmd002";
+    }
+
+    // Rhino calls RunCommand to run the command.
+    CRhinoCommand::result RunCommand(const CRhinoCommandContext& context) override;
+};
+
+// The one and only CCommandYuxinPlugin object
+// Do NOT create any other instance of a CCommandYuxinPlugin class.
+static class CCommandYuxinPlugin02 CCommandYuxinPlugin02;
+
+CRhinoCommand::result CCommandYuxinPlugin02::RunCommand(const CRhinoCommandContext& context)
+{
+    ON_wString str;
+
+
+    const wchar_t* pszStr = static_cast<const wchar_t*>(str);
+    if (context.IsInteractive())
+        RhinoMessageBox(pszStr, YuxinFirstPluginPlugIn().PlugInName(), MB_OK);
+    else
+        RhinoApp().Print(pszStr);
+
+    // TODO: Return one of the following values:
+    //   CRhinoCommand::success:  The command worked.
+    //   CRhinoCommand::failure:  The command failed because of invalid input, inability
+    //                            to compute the desired result, or some other reason
+    //                            computation reason.
+    //   CRhinoCommand::cancel:   The user interactively canceled the command 
+    //                            (by pressing ESCAPE, clicking a CANCEL button, etc.)
+    //                            in a Get operation, dialog, time consuming computation, etc.
+
+    return CRhinoCommand::success;
+}
+
 
 #pragma endregion
 
