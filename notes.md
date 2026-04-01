@@ -1,6 +1,6 @@
 # 3.31
 
-## progress
+// DONE
 - installed vs, rhino sdk...
 - build a 2-cmd(printf) plug-in
 
@@ -14,9 +14,11 @@
 
 # 4.1
 
-## to do
-	- git repo within LBP (Josh)
-	- play a few fundamentals SDK cmds
+// TODO
+- ask git repo within LBP (Josh)
+
+- //DONE
+- play a few fundamentals SDK cmds
 
 ## shourtcuts
 - ctrl+0, ctrl+G
