@@ -1,30 +1,13 @@
-// YuxinFirstPluginPlugIn.h : main header file for the YuxinFirstPlugin plug-in.
-//
-
 #pragma once
-
-// CYuxinFirstPluginPlugIn
-// See YuxinFirstPluginPlugIn.cpp for the implementation of this class
-//
 
 class CYuxinFirstPluginPlugIn : public CRhinoUtilityPlugIn
 {
 public:
-  // CYuxinFirstPluginPlugIn constructor. The constructor is called when the
-  // plug-in is loaded and "thePlugIn" is constructed. Once the plug-in
-  // is loaded, CYuxinFirstPluginPlugIn::OnLoadPlugIn() is called. The
-  // constructor should be simple and solid. Do anything that might fail in
-  // CYuxinFirstPluginPlugIn::OnLoadPlugIn().
   CYuxinFirstPluginPlugIn();
-  
-  // CYuxinFirstPluginPlugIn destructor. The destructor is called to destroy
-  // "thePlugIn" when the plug-in is unloaded. Immediately before the
-  // DLL is unloaded, CYuxinFirstPluginPlugIn::OnUnloadPlugin() is called. Do
-  // not do too much here. Be sure to clean up any memory you have allocated
-  // with onmalloc(), onrealloc(), oncalloc(), or onstrdup().
   ~CYuxinFirstPluginPlugIn() = default;
 
   // Required overrides
+  /* why overrides: because in CRhinoUtilityPlugIn, these are already there*/
   
   // Plug-in name display string. This name is displayed by Rhino when
   // loading the plug-in, in the plug-in help menu, and in the Rhino
@@ -63,6 +46,3 @@ private:
 
 // Return a reference to the one and only CYuxinFirstPluginPlugIn object
 CYuxinFirstPluginPlugIn& YuxinFirstPluginPlugIn();
-
-
-

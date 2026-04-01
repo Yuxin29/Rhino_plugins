@@ -14,8 +14,10 @@
 #pragma warning(pop)
 
 // Rhino plug-in declaration
+/* the macro */
 RHINO_PLUG_IN_DECLARE
 
+/* below are all the infos of the macro */
 // Rhino plug-in name
 // Provide a short, friendly name for this plug-in.
 RHINO_PLUG_IN_NAME(L"YuxinFirstPlugin");
@@ -80,6 +82,7 @@ CYuxinFirstPluginPlugIn::CYuxinFirstPluginPlugIn()
 
 /////////////////////////////////////////////////////////////////////////////
 // Required overrides
+/* below are the getters of CYuxinFirstPluginPlugIn */
 
 const wchar_t* CYuxinFirstPluginPlugIn::PlugInName() const
 {
@@ -148,6 +151,3 @@ void CYuxinFirstPluginPlugIn::OnUnloadPlugIn()
 
 	// TODO: Add plug-in cleanup code here.
 }
-
-
-

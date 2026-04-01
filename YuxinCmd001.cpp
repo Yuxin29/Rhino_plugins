@@ -1,5 +1,4 @@
 // YuxinCmd001.cpp : command file
-//
 
 #include "stdafx.h"
 #include "YuxinFirstPluginPlugIn.h"
